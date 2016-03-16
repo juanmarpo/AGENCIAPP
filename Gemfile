@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'devise', "~> 4.0.0.rc2"
+gem 'protected_attributes'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
