@@ -11,7 +11,8 @@
 		<div class="container">
 			<a href="" class="navbar-brand">AGENCIAPP</a>
 			 <ul class="nav navbar-nav">    		 
-			 <li class="active"><%= link_to "Status", statuses_path %></li>
+			 <li class="inactive"><%= link_to "Status", statuses_path %></li>
+			  <li class="active"><%= link_to "Sign Out", destroy_model_session_path, method: :delete%></li>
        		</ul>
 		</div>
 
