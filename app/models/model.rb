@@ -4,14 +4,12 @@ class Model < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
-         def name_all
-         	"#{name}" + " " + "#{last_name}"
-         end
+  has_many :statuses
 
 
-  
-
+  def name_all
+     name + " " + last_name
+   end
 
 
 end
