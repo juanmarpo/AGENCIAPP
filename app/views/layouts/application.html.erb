@@ -10,15 +10,38 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<%= link_to 'AGENCIAPP', root_path , :class => "navbar-brand" %>
+
+    <!--   // Lista de opciones, en el navbar, horizontales. // -->
+
+
 			 <ul class="nav navbar-nav">    		 
 			 <li class="inactive"><%= link_to "Status", statuses_path %></li>
        		</ul>
+
+
+    <!--   // Links al lado izquierdo // -->
+
+
        		<ul class="nav navbar-nav pull-right">
+
+          <!--   // Profile  // -->
+
        			<% if model_signed_in? %>
        				<li><%= link_to current_model.name_all,  edit_model_registration_path %></li>
+
+                  <!--   // Exit // -->
+
        				<li><%= link_to 'Cerrar Sesion',  destroy_model_session_path, method: :delete %></li>
+
+
+                    <!--   // Sign Up // -->
+
        			<% else %>
        				<li><%= link_to 'Registro',   new_model_registration_path %></li>
+
+
+                        <!--   // Sign in // -->
+
        				<li><%= link_to 'Inicio de sesion',  new_model_session_path %></li>
        			<% end %>
        		</ul>
@@ -27,13 +50,22 @@
 </div>
 
 
+
 <div class="container">
+
+    <!--   // MENSAJES DE LA PAGINA (alertas y notices) // -->
+
 	   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
-<%= yield %>
+
+    <!--   // CONTENIDO, DENTRO DE LA CLASE CSS CONTAINER// -->
+          <%= yield %>
 
 </div>
+
+
+
 
 </body>
 </html>

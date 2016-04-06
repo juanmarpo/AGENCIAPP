@@ -1586,6 +1586,15 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
+.container-statuses {
+  padding-right: 50%;
+  padding-left: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
 @media (min-width: 768px) {
   .container {
     width: 750px;

@@ -81,4 +81,11 @@ class StatusesController < ApplicationController
     def status_params
       params.require(:status).permit(:model_id, :contenido)
     end
+
+
+ 
 end
+
+
+
+

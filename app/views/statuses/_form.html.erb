@@ -7,17 +7,22 @@
       <% @status.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
+
+
+
       </ul>
     </div>
   <% end %>
 
 
- <%= f.input :model_id , collection: Model.all, label_method: :name_all%>
+
+
+ <%= f.input :model_id , collection: Model.name_all %>
  <%= f.input :contenido %>
 
 
   </div>
   <div class="form-actions">
-    <%= f.button :submit %>
+      <%= f.button :submit %>
   </div>
 <% end %>

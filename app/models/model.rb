@@ -11,5 +11,8 @@ class Model < ActiveRecord::Base
      name + " " + last_name
    end
 
+  validates :name, :last_name, :email, :password, :password_confirmation, presence: true
+
+
 
 end
