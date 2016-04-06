@@ -14,12 +14,15 @@
     <!--   // Lista de opciones, en el navbar, horizontales. // -->
 
 
-			 <ul class="nav navbar-nav">    		 
-			 <li class="inactive"><%= link_to "Status", statuses_path %></li>
-       		</ul>
+			 <ul class="nav navbar-nav pull-left">    	
+        <% if model_signed_in? %>
+
+			     <li class="inactive"><%= link_to "Status", timeline_path %></li>
+           <% end %>
+       </ul>
 
 
-    <!--   // Links al lado izquierdo // -->
+    <!--   // Links al lado derecho // -->
 
 
        		<ul class="nav navbar-nav pull-right">
@@ -31,18 +34,18 @@
 
                   <!--   // Exit // -->
 
-       				<li><%= link_to 'Cerrar Sesion',  destroy_model_session_path, method: :delete %></li>
+       				<li><%= link_to 'Cerrar Sesion', salir_path, method: :delete %></li>
 
 
                     <!--   // Sign Up // -->
 
        			<% else %>
-       				<li><%= link_to 'Registro',   new_model_registration_path %></li>
+       				<li><%= link_to 'Registro',   registro_path %></li>
 
 
                         <!--   // Sign in // -->
 
-       				<li><%= link_to 'Inicio de sesion',  new_model_session_path %></li>
+       				<li><%= link_to 'Inicio de sesion', ingreso_path %></li>
        			<% end %>
        		</ul>
 		</div>
@@ -55,8 +58,17 @@
 
     <!--   // MENSAJES DE LA PAGINA (alertas y notices) // -->
 
-	   <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+
+   <% flash.each do |type, message|%>
+   <div class="alert <%= flash_class type %> alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+        <%= message %>
+
+   </div>
+
+   <% end %>
+
+
 
 
     <!--   // CONTENIDO, DENTRO DE LA CLASE CSS CONTAINER// -->

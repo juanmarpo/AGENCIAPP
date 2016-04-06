@@ -9,10 +9,11 @@ class Model < ActiveRecord::Base
 
   def name_all
      name + " " + last_name
+
    end
 
   validates :name, :last_name, :email, :password, :password_confirmation, presence: true
-
-
+  validates :display_name , presence: true, uniqueness: true
+  															
 
 end

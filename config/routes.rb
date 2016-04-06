@@ -3,7 +3,16 @@ Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
   devise_for :models
+
+  devise_scope :model do
+    get 'registro', to: 'devise/registrations#new', as: :registro
+    get 'ingreso', to: 'devise/sessions#new', as: :ingreso
+    get 'salir', to: 'devise/sessions#destroy', as: :salir, method: :delete
+
+  end
+
   resources :statuses
+   get 'timeline', to: 'statuses#index', as: :timeline
   root to: "statuses#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -53,7 +62,6 @@ Rails.application.routes.draw do
   #   end
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
-
   # Example resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController

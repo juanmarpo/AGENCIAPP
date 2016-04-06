@@ -16,13 +16,17 @@
 
 
 
+ <%=  f.input :model_id, :as => :hidden, :input_html => { :value => current_model.id }  %>
 
- <%= f.input :model_id , collection: Model.name_all %>
  <%= f.input :contenido %>
 
 
-  </div>
+  
   <div class="form-actions">
       <%= f.button :submit %>
   </div>
+
+
 <% end %>
+  </div>
+
