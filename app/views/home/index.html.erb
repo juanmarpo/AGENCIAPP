@@ -1,0 +1,50 @@
+
+
+
+
+<div class="jumbotron">
+  
+ <div class="container">
+    <h2>Welcome!</h2>
+  <p>Already you can enter to the better model marketplace, you can search a models or post your photobooks to modeling</p>
+
+
+  <p><a class="btn btn-primary btn-lg" href="<%= registro_path %>" role="button">Join in!</a></p>
+  </div>
+
+
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    
+
+
+
+
+
+<H3>Our last models</H3>
+
+
+<% Model.last(6).each do |model|  %>
+
+ <div class="col-xs-6 col-md-3">
+    <a href="<%= %>" class="thumbnail">
+      <img src="http://www.genesislevel.com/uploads/2/7/4/4/27443071/_5569004_orig.jpg" alt=" <%= model.name_all %>">
+    </a>
+  </div>
+
+<% end %>
+
+
+
+
+
+
+  </div>
+</div>
+
+
+

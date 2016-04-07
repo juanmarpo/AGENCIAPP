@@ -5,15 +5,26 @@ Rails.application.routes.draw do
   devise_for :models
 
   devise_scope :model do
-    get 'registro', to: 'devise/registrations#new', as: :registro
+    get 'registro', to: 'devise/registrations#index', as: :registro   
+    get 'registro_model', to: 'devise/registrations#new', as: :registro_model
+    
+
     get 'ingreso', to: 'devise/sessions#new', as: :ingreso
     get 'salir', to: 'devise/sessions#destroy', as: :salir, method: :delete
+
+    get "/model/:display_name", to: 'model#profile'
 
   end
 
   resources :statuses
    get 'timeline', to: 'statuses#index', as: :timeline
-  root to: "statuses#index"
+
+
+
+
+
+
+  root "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

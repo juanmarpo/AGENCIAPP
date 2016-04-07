@@ -2,6 +2,11 @@ source 'https://rubygems.org'
 
 gem 'devise', "~> 3.2"
 
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-twitter"
+
+
 
 gem 'protected_attributes'
 

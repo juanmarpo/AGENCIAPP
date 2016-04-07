@@ -9,43 +9,47 @@
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
-			<%= link_to 'AGENCIAPP', root_path , :class => "navbar-brand" %>
-
-    <!--   // Lista de opciones, en el navbar, horizontales. // -->
+	     <%= link_to 'AGENCIAPP', root_path , :class => "navbar-brand" %>
 
 
-			 <ul class="nav navbar-nav pull-left">    	
-        <% if model_signed_in? %>
+       <!--   // Lista de opciones, en el navbar, horizontales. // -->
 
-			     <li class="inactive"><%= link_to "Status", timeline_path %></li>
-           <% end %>
-       </ul>
+       <!--   // Profile  // -->
+
+       <% if model_signed_in? %>
+          <ul class="nav nav-pills" role="tablist">
+              <li role="presentation" class="active"><a href="<%= timeline_path %> ">Home <span class="badge">42</span></a></li>
+  
+              <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+          </ul>
 
 
-    <!--   // Links al lado derecho // -->
-
-
-       		<ul class="nav navbar-nav pull-right">
-
-          <!--   // Profile  // -->
-
-       			<% if model_signed_in? %>
-       				<li><%= link_to current_model.name_all,  edit_model_registration_path %></li>
-
+      <ul class="nav navbar-nav pull-right">
+       			<ul class="nav nav-pills" role="tablist">
+              <li role="presentation"><%= link_to current_model.name_all,  edit_model_registration_path %></li>
+            
                   <!--   // Exit // -->
 
-       				<li><%= link_to 'Cerrar Sesion', salir_path, method: :delete %></li>
+       				<li><%= link_to 'Cerrar Sesion', salir_path %></li>
 
-
+              </ul>
                     <!--   // Sign Up // -->
 
        			<% else %>
+
+
+<ul class="nav navbar-nav pull-right">
+      <ul class="nav nav-pills" role="tablist">
        				<li><%= link_to 'Registro',   registro_path %></li>
 
 
                         <!--   // Sign in // -->
 
        				<li><%= link_to 'Inicio de sesion', ingreso_path %></li>
+            </ul>
+</ul>
+
+
        			<% end %>
        		</ul>
 		</div>
