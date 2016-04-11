@@ -1,7 +1,22 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
+
+
+
+
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
+
+
+  <div class="field">
+    <%= f.label :display_name %><br />
+    <%= f.text_field :display_name, autofocus: true %>
+  </div
+
 
   <div class="field">
     <%= f.label :email %><br />

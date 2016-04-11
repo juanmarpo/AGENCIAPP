@@ -13,7 +13,7 @@ class Model < ActiveRecord::Base
    end
 
   validates :name, :last_name, :email, :password, :password_confirmation, presence: true
-  validates :display_name , presence: true, uniqueness: true
+  
   															
 
 end

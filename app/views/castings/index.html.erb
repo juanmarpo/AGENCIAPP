@@ -67,3 +67,50 @@
 
 
 <% end %>
+
+
+
+
+
+
+p id="notice"><%= notice %></p>
+
+<h1>Listing Castings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Payment type</th>
+      <th>Ubication</th>
+      <th>Casting end</th>
+      <th>Video</th>
+      <th>Images</th>
+      <th>Member</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @castings.each do |casting| %>
+      <tr>
+        <td><%= casting.title %></td>
+        <td><%= casting.description %></td>
+        <td><%= casting.payment_type %></td>
+        <td><%= casting.ubication %></td>
+        <td><%= casting.casting_end %></td>
+        <td><%= casting.video %></td>
+        <td><%= casting.images %></td>
+        <td><%= casting.member_id %></td>
+        <td><%= link_to 'Show', casting %></td>
+        <td><%= link_to 'Edit', edit_casting_path(casting) %></td>
+        <td><%= link_to 'Destroy', casting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Casting', new_casting_path %>

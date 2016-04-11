@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :members
+  resources :castings
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   ActiveAdmin.routes(self)
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
     get 'ingreso', to: 'devise/sessions#new', as: :ingreso
     get 'salir', to: 'devise/sessions#destroy', as: :salir, method: :delete
 
-    get "/model/:display_name", to: 'model#profile'
+    get "/model/profile", to: 'model#profile'
 
   end
 

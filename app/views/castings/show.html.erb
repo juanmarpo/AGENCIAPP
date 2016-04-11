@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @casting.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @casting.description %>
+</p>
+
+<p>
+  <strong>Payment type:</strong>
+  <%= @casting.payment_type %>
+</p>
+
+<p>
+  <strong>Ubication:</strong>
+  <%= @casting.ubication %>
+</p>
+
+<p>
+  <strong>Casting end:</strong>
+  <%= @casting.casting_end %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @casting.video %>
+</p>
+
+<p>
+  <strong>Images:</strong>
+  <%= @casting.images %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @casting.member_id %>
+</p>
+
+<%= link_to 'Edit', edit_casting_path(@casting) %> |
+<%= link_to 'Back', castings_path %>

@@ -1,0 +1,30 @@
+<%= simple_form_for(@member) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :member_type %>
+    <%= f.input :name %>
+    <%= f.input :last_name %>
+    <%= f.input :diplay_name %>
+    <%= f.input :phone %>
+    <%= f.input :date_of_birth %>
+    <%= f.input :city %>
+    <%= f.input :about %>
+    <%= f.input :gender %>
+    <%= f.input :ethnicity_id %>
+    <%= f.input :categories_id %>
+    <%= f.input :hair_id %>
+    <%= f.input :eyes_id %>
+    <%= f.input :heigth %>
+    <%= f.input :bust %>
+    <%= f.input :waist %>
+    <%= f.input :hips %>
+    <%= f.input :shoes %>
+    <%= f.input :disciplines_id %>
+    <%= f.input :email %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318211533) do
+ActiveRecord::Schema.define(version: 20160411031456) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -45,6 +45,44 @@ ActiveRecord::Schema.define(version: 20160318211533) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+
+  create_table "castings", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "payment_type"
+    t.string   "ubication"
+    t.date     "casting_end"
+    t.string   "video"
+    t.string   "images"
+    t.integer  "member_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.string   "member_type"
+    t.string   "name"
+    t.string   "last_name"
+    t.string   "diplay_name"
+    t.string   "phone"
+    t.date     "date_of_birth"
+    t.string   "city"
+    t.string   "about"
+    t.string   "gender"
+    t.integer  "ethnicity_id"
+    t.integer  "categories_id"
+    t.integer  "hair_id"
+    t.integer  "eyes_id"
+    t.integer  "heigth"
+    t.integer  "bust"
+    t.integer  "waist"
+    t.integer  "hips"
+    t.integer  "shoes"
+    t.integer  "disciplines_id"
+    t.string   "email"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "models", force: :cascade do |t|
     t.string   "name"

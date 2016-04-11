@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  payment_type: MyString
+  ubication: MyString
+  casting_end: 2016-04-10
+  video: MyString
+  images: MyString
+  member_id: 1
+
+two:
+  title: MyString
+  description: MyString
+  payment_type: MyString
+  ubication: MyString
+  casting_end: 2016-04-10
+  video: MyString
+  images: MyString
+  member_id: 1

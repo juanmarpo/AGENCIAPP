@@ -15,6 +15,9 @@ class StatusesController < ApplicationController
       format.html #index.html.erb
       format.json { render json: @statuses }
     end
+
+
+    
   end
 
   # GET /statuses/1

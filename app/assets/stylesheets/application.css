@@ -3438,6 +3438,7 @@ fieldset[disabled] .btn-link:focus {
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px;
+  float: right;
 }
 .btn-sm,
 .btn-group-sm > .btn {
@@ -4592,6 +4593,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse {
   background-color: #222;
   border-color: #080808;
+  color: white;
 }
 .navbar-inverse .navbar-brand {
   color: #9d9d9d;

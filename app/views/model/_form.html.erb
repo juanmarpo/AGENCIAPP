@@ -1,0 +1,31 @@
+<%= simple_form_for @model do |f| %>
+
+ <%=  f.input :model_id, :as => :hidden, :input_html => { :value => current_model.id }  %>
+
+
+ <%= f.input :display_name %>
+ <%= f.input :name %>
+ <%= f.input :last_name %>
+ <%= f.input :email %>
+ <%= f.input :date_of_birth %>
+ <%= f.input :city %>
+ <%= f.input :about %>
+ <%= f.input :gender %>
+ <%= f.input :phone %>
+ <%= f.input :email %>
+
+
+  
+  <div class="form-actions">
+      <%= f.button :submit %>
+  </div>
+
+
+<% end %>
+
+
+
+
+
+
+
