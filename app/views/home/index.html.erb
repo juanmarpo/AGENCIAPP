@@ -1,13 +1,13 @@
 
 
 
-<% if model_signed_in? %>
+<% if member_signed_in? %>
 <br>
 <br>
 <br> 
 
 
-<h3 align="center" >Hi <%= current_model.name %>, what you want to do? </h3>
+<h3 align="center" >Hi <%= current_member.name %>, what you want to do? </h3>
 
 <% else %>
 
@@ -52,11 +52,11 @@
 <H3>Our last models</H3>
 
 
-<% Model.last(6).each do |model|  %>
+<% Member.last(6).each do |member|  %>
 
  <div class="col-xs-6 col-md-2">
     <a href="<%= %>" class="thumbnail">
-      <img src="http://www.genesislevel.com/uploads/2/7/4/4/27443071/_5569004_orig.jpg" alt=" <%= model.name_all %>">
+      <img src="http://www.genesislevel.com/uploads/2/7/4/4/27443071/_5569004_orig.jpg" alt=" <%= member.name_all %>">
     </a>
 </div>
 

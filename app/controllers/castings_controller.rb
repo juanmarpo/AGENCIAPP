@@ -1,10 +1,10 @@
-class CastingsController < InheritedResources::Base
+class CastingsController < ApplicationController
 
   
   before_action :set_status, only: [:show, :edit, :update, :destroy]
 
  ## SISTEMA DE SEGURIDAD PARA QUE ESTE LOGUEADO 
-  before_action :authenticate_model!
+  before_action :authenticate_member!
 
 
 

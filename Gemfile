@@ -13,9 +13,6 @@ gem 'protected_attributes'
 gem "letter_opener", :group => :development
 
 
-gem 'activeadmin', '~> 1.0.0.pre2'
-
-
 
 gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -32,7 +32,7 @@
 
        <!--   // Profile  // -->
 
-       <% if model_signed_in? %>
+       <% if member_signed_in? %>
           <ul class="nav nav-pills" role="tablist">
               <li role="presentation" class="active"><a href="<%= timeline_path %> ">Castings <span class="badge">42</span></a></li>
   
@@ -41,7 +41,7 @@
 
 
        			<li   class="nav nav-pills " role="tablist">
-             <%= link_to current_model.name_all,  '/model/profile' %></li>
+             <%= link_to current_member.name_all,  '/model/profile' %></li>
             
                   <!--   // Exit // -->
 
@@ -58,12 +58,12 @@
 
 <ul class="nav navbar-nav pull-right">
       <ul class="nav nav-pills" role="tablist">
-       				<li><%= link_to 'Registro',   registro_path %></li>
+       				<li><%= link_to 'Sign Up',   registro_path %></li>
 
 
                         <!--   // Sign in // -->
 
-       				<li><%= link_to 'Inicio de sesion', ingreso_path %></li>
+       				<li><%= link_to 'Sign In', ingreso_path %></li>
             </ul>
 </ul>
 

@@ -2,20 +2,18 @@ Rails.application.routes.draw do
   devise_for :members
   resources :members
   resources :castings
-  devise_for :admin_users, ActiveAdmin::Devise.config
 
-  ActiveAdmin.routes(self)
-  devise_for :models
 
-  devise_scope :model do
+
+
+  devise_scope :member do
     get 'registro', to: 'devise/registrations#index', as: :registro   
-    get 'registro_model', to: 'devise/registrations#new', as: :registro_model
-    
+    get 'registro_member', to: 'devise/registrations#new', as: :registro_member  
 
     get 'ingreso', to: 'devise/sessions#new', as: :ingreso
     get 'salir', to: 'devise/sessions#destroy', as: :salir, method: :delete
 
-    get "/model/profile", to: 'model#profile'
+    get "/member/profile", to: 'member#profile'
 
   end
 

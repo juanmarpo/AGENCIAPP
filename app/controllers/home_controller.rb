@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
 	def index
-	@exist = Model.all 
+	@exist = Member.all 
 
 	end
 
