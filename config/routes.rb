@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :members
   resources :members
   resources :castings
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
   end
 
   resources :statuses
-   get 'timeline', to: 'statuses#index', as: :timeline
+   get 'timeline', to: 'castings#index', as: :timeline
 
 
 

@@ -24,12 +24,12 @@
 <div  class="container-castings">
 
 
-<% @castinges.each do |casting| %>
+<% @castings.each do |casting| %>
 
   <div class="col-sm-3 col-md-5">
     <div class="thumbnail">
 
-     <% if current_model.name_all == casting.model.name_all %>
+     <% if current_member.name_all == casting.member.name_all %>
 
     <span class="admin">
 
@@ -73,7 +73,7 @@
 
 
 
-p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <h1>Listing Castings</h1>
 
@@ -87,7 +87,6 @@ p id="notice"><%= notice %></p>
       <th>Casting end</th>
       <th>Video</th>
       <th>Images</th>
-      <th>Member</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -102,7 +101,6 @@ p id="notice"><%= notice %></p>
         <td><%= casting.casting_end %></td>
         <td><%= casting.video %></td>
         <td><%= casting.images %></td>
-        <td><%= casting.member_id %></td>
         <td><%= link_to 'Show', casting %></td>
         <td><%= link_to 'Edit', edit_casting_path(casting) %></td>
         <td><%= link_to 'Destroy', casting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
